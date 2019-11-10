@@ -1,0 +1,19 @@
+@startuml
+
+class user{
+	id
+	account
+	password
+	username
+}
+
+class administrator{
+	id
+	account
+	password
+	status
+	create_time
+	update_time
+	delete_time
+}
+@enduml

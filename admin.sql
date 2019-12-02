@@ -18,5 +18,23 @@ DROP TABLE IF EXISTS `role`;
 CREATE TABLE `role`(
   `id` int(11) NOT NULL AUTO_INCREMENT ,
   `role_name` varchar(20) NOT NULL DEFAULT '' COMMENT '角色名',
-  ``
-);
+  `created` datetime DEFAULT now() COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE = Innodb CHARSET = utf8 COMMENT '角色表';
+
+DROP TABLE IF EXISTS `auth`;
+CREATE TABLE `auth`(
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+
+) ENGINE = Innodb CHARSET = utf8 COMMENT '权限表';
+
+DROP TABLE IF EXISTS `administrator_role`;
+CREATE TABLE `administrator_role`(
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+
+) ENGINE = Innodb CHARSET = utf8 COMMENT '管理员、角色表关联表';
+
+
+
